@@ -21,6 +21,8 @@
 		7FF4380B19BA405C00854F57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF437ED19BA405B00854F57 /* UIKit.framework */; };
 		7FF4381319BA405C00854F57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FF4381119BA405C00854F57 /* InfoPlist.strings */; };
 		7FF4381519BA405C00854F57 /* ForeignCountryTipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF4381419BA405C00854F57 /* ForeignCountryTipTests.m */; };
+		7FF4382019BA418F00854F57 /* DHExchangeRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF4381F19BA418F00854F57 /* DHExchangeRates.m */; };
+		7FF4382319BA56E300854F57 /* ExchangeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF4382219BA56E300854F57 /* ExchangeTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		7FF4381019BA405C00854F57 /* ForeignCountryTipTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ForeignCountryTipTests-Info.plist"; sourceTree = "<group>"; };
 		7FF4381219BA405C00854F57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7FF4381419BA405C00854F57 /* ForeignCountryTipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForeignCountryTipTests.m; sourceTree = "<group>"; };
+		7FF4381E19BA418F00854F57 /* DHExchangeRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHExchangeRates.h; sourceTree = "<group>"; };
+		7FF4381F19BA418F00854F57 /* DHExchangeRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHExchangeRates.m; sourceTree = "<group>"; };
+		7FF4382119BA56E300854F57 /* ExchangeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeTableViewController.h; sourceTree = "<group>"; };
+		7FF4382219BA56E300854F57 /* ExchangeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,10 @@
 				7FF437FB19BA405B00854F57 /* Main.storyboard */,
 				7FF437FE19BA405B00854F57 /* ViewController.h */,
 				7FF437FF19BA405B00854F57 /* ViewController.m */,
+				7FF4381E19BA418F00854F57 /* DHExchangeRates.h */,
+				7FF4381F19BA418F00854F57 /* DHExchangeRates.m */,
+				7FF4382119BA56E300854F57 /* ExchangeTableViewController.h */,
+				7FF4382219BA56E300854F57 /* ExchangeTableViewController.m */,
 				7FF4380119BA405B00854F57 /* Images.xcassets */,
 				7FF437F019BA405B00854F57 /* Supporting Files */,
 			);
@@ -250,7 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FF4380019BA405B00854F57 /* ViewController.m in Sources */,
+				7FF4382319BA56E300854F57 /* ExchangeTableViewController.m in Sources */,
 				7FF437FA19BA405B00854F57 /* AppDelegate.m in Sources */,
+				7FF4382019BA418F00854F57 /* DHExchangeRates.m in Sources */,
 				7FF437F619BA405B00854F57 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
