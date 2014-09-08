@@ -23,7 +23,10 @@ NSString *const kExchangeRatesNotification = @"kExchangeRatesNotification";
 
 @end
 
-@implementation DHExchangeRates
+@implementation DHExchangeRates {
+    BOOL gettingExchangeRates;
+    BOOL gettingCountryNames;
+}
 
 + (DHExchangeRates *)sharedInstance {
     static DHExchangeRates *_instance = nil;
@@ -35,7 +38,10 @@ NSString *const kExchangeRatesNotification = @"kExchangeRatesNotification";
 }
 
 - (void)refreshExchangeRates:(id)sender {
+    gettingExchangeRates = YES;
+    gettingCountryNames = YES;
     [self fetchExchangeRates];
+    [self fetchCountryNames];
 }
 
 
@@ -67,7 +73,11 @@ NSString *const kExchangeRatesNotification = @"kExchangeRatesNotification";
             NSLog(@"Could not Get Exchange Rates: %@", err.description);
             return;
         }
-        [self fetchCountryNames];
+        gettingExchangeRates = NO;
+        if (gettingCountryNames == NO) {
+            //fetch country names has finished therefore broadcast
+            [self broadCastExchangeRates];
+        }
     }];
 }
 
@@ -88,7 +98,11 @@ NSString *const kExchangeRatesNotification = @"kExchangeRatesNotification";
             NSLog(@"Could not get nation names: %@", err.description);
             return;
         }
-        [self broadCastExchangeRates];
+        gettingCountryNames = NO;
+        if (gettingExchangeRates == NO) {
+            //fetching exchange rates has finsihed therefore broadcast
+            [self broadCastExchangeRates];
+        }
     }];
 }
 
