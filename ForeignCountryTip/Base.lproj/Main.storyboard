@@ -22,6 +22,14 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.79323124957052937" green="0.96570502686782811" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="xKd-rC-HnZ" kind="modal" identifier="leftButton" id="bkB-Wy-8uC"/>
                                 </connections>
@@ -39,6 +47,14 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.78823578312292097" green="0.974926548712436" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="xKd-rC-HnZ" kind="modal" identifier="rightButton" id="96O-vJ-xZ4"/>
                                 </connections>
@@ -54,10 +70,9 @@
                                 <rect key="frame" x="74" y="110" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="textfieldValueChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="jCv-e9-aNc"/>
-                                    <action selector="textfieldValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="xwi-TD-BER"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="24W-hx-Hxv"/>
                                 </connections>
                             </textField>
@@ -65,10 +80,9 @@
                                 <rect key="frame" x="74" y="166" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="textfieldValueChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="OPA-oa-7ia"/>
-                                    <action selector="textfieldValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="hZJ-Uq-unF"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="9qS-N4-YYV"/>
                                 </connections>
                             </textField>
@@ -76,9 +90,8 @@
                                 <rect key="frame" x="167" y="166" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="textfieldValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="XJf-H3-mbt"/>
                                     <action selector="textfieldValueChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="cl0-q8-ELf"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="ekg-ik-jJn"/>
                                 </connections>
@@ -103,21 +116,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkO-tp-atZ">
-                                <rect key="frame" x="137" y="57" width="37" height="30"/>
+                                <rect key="frame" x="131" y="57" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="swap">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="0.8214185007090945" blue="0.98065483341225479" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="tappedSwap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qek-Hj-JjH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oA8-cp-us5">
-                                <rect key="frame" x="20" y="19" width="91" height="30"/>
+                                <rect key="frame" x="20" y="19" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="refresh Rates">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.98637180373986344" green="1" blue="0.58610185547743043" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="tappedRefreshRates:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="d4q-Zf-bc7"/>
                                 </connections>

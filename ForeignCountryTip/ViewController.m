@@ -80,44 +80,25 @@
     float leftSubtotal = self.leftSubTotal.text.floatValue;
     float leftTip = self.leftTipTextField.text.floatValue * 0.01;
     float leftAmount = leftSubtotal + leftTip;
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
+    {//set left total text
         self.leftTotal.text = [NSString stringWithFormat:@"%.2f %@", leftAmount, _leftCurrencyKey];
-    });
-    
+    }
     float rightSubTotal = self.rightSubTotal.text.floatValue;
     float rightTip = self.rightTipTextField.text.floatValue * 0.01;
     float rightAmount = rightSubTotal + rightTip;
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
+    {//set right total text
         self.rightTotal.text = [NSString stringWithFormat:@"%.2f %@", rightAmount, _rightCurrencKey];
-    });
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    if([string isEqualToString:@"0"]||
-       [string isEqualToString:@"1"]||
-       [string isEqualToString:@"2"]||
-       [string isEqualToString:@"3"]||
-       [string isEqualToString:@"4"]||
-       [string isEqualToString:@"5"]||
-       [string isEqualToString:@"6"]||
-       [string isEqualToString:@"7"]||
-       [string isEqualToString:@"8"]||
-       [string isEqualToString:@"9"]||
-       [string isEqualToString:@"."]||
-       [string isEqualToString:@""]) {
-        return YES;
     }
-    return NO;
 }
-
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if ([string isEqualToString:@"."]) {
+        if ([textField.text rangeOfString:@"."].location == NSNotFound) {
+            return YES;
+        }
+        return NO;
+    }
+    return YES;
+}
 
 #pragma mark - prepar segue
 
